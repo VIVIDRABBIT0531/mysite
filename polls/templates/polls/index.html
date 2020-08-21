@@ -39,7 +39,7 @@
             <td>{{ question.question_text }}</td>
             <td>{{ question.pub_date }}</td>
             {% if latest_question_list %}
-            <td><a href="{% url 'polls:detail' question.pk %}">{{ question.question_text }}詳細画面へ</a></td>
+            <td><a class="btn btn-success" href="{% url 'polls:detail' question.pk %}" role="button">{{ question.question_text }}詳細画面へ</a></td>
         </tr>
         {% else %}
             <p>No polls are available.</p>
