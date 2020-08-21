@@ -21,13 +21,16 @@
     </div>
 </nav>
 
-<h1>{{ question.question_text }}</h1>
+<div class="container">
+<h1 class="mt-5 pt-4 text-center">result</h1>
+<h2 class="text-center">{{ question.question_text }}</h2>
+</div>
 
 
 <ul>
 {% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}
-</li>
+    <h3 class="text-center" ><li class="text-center">{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}
+</li></h3>
 {% endfor %}
 </ul>
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<h3 class="text-center"><a href="{% url 'polls:detail' question.id %}">Vote again?</a></h3>
